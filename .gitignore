@@ -313,7 +313,15 @@ http-client.private.env.json
 # Built Visual Studio Code Extensions
 *.vsix
 
-# PROJECT SPECIFIC EXCLUSIONS ↓
+# PROJECT SPECIFIC EXCLUSIONS
 
-# Exclude logs directory
+# Logs
 logs/*
+
+# Modeles entraines (lourds, reproductibles via train_models.py)
+models/*.joblib
+models/*.pkl
+models/*.pickle
+
+# Garder le dataset principal tracke (requis pour la correction)
+!data/MutualFunds.csv

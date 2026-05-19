@@ -23,6 +23,8 @@ for dir in [
 ]:
     dir.mkdir(exist_ok=True)
 
+MUTUAL_FUNDS_CSV = DATA_DIR / "MutualFunds.csv"
+
 ENV_FILE = PROJECT_ROOT / ".env"
 APP_ENTRYPOINT = PROJECT_ROOT / "src" / "app.py"
 MODEL_METRICS_FILE = RESULTS_DIR / "model_metrics.csv"
@@ -30,12 +32,20 @@ MODEL_METRICS_FILE = RESULTS_DIR / "model_metrics.csv"
 STREAMLIT_HOST = "localhost"
 STREAMLIT_PORT = 8501
 
-# Students must replace this example with their trained models.
-# Each entry must point to a serialized model saved as `.joblib`, `.pkl`, or `.pickle`.
 MODELS = {
-    "model_a": {
-        "name": "Model A",
-        "description": "A simple baseline model.",
-        "path": MODELS_DIR / "model_a.pkl",
+    "ridge": {
+        "name": "Ridge Regression",
+        "description": "Baseline linéaire régularisé (L2). Rapide et interprétable.",
+        "path": MODELS_DIR / "ridge.joblib",
+    },
+    "random_forest": {
+        "name": "Random Forest",
+        "description": "Ensemble d'arbres de décision. Robuste aux outliers et non-linéaire.",
+        "path": MODELS_DIR / "random_forest.joblib",
+    },
+    "gradient_boosting": {
+        "name": "Hist Gradient Boosting",
+        "description": "Boosting par histogrammes. Modèle de pointe, gère nativement les NaN.",
+        "path": MODELS_DIR / "gradient_boosting.joblib",
     },
 }

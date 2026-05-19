@@ -1,0 +1,4 @@
+model_key,model_name,model_path,MAE,RMSE,R2,Win Rate
+ridge,Ridge Regression,C:\Users\edgar\Downloads\hackaton\ml-poc-project\models\ridge.joblib,2.1548,3.2171,0.5335,0.9383
+random_forest,Random Forest,C:\Users\edgar\Downloads\hackaton\ml-poc-project\models\random_forest.joblib,1.7189,2.5454,0.7079,0.9427
+gradient_boosting,Hist Gradient Boosting,C:\Users\edgar\Downloads\hackaton\ml-poc-project\models\gradient_boosting.joblib,1.3432,2.0973,0.8017,0.9562
